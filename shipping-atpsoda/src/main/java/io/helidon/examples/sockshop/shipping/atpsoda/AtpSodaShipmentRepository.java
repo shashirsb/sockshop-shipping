@@ -141,7 +141,7 @@ public class AtpSodaShipmentRepository implements ShipmentRepository {
 
                      // String str = "2020-10-29T14:17:02.216+00:00"; 
                      String strDatewithTime = jsonObject.get("deliveryDate").toString();
-                     LocalDateTime aLDT = LocalDateTime.parse(strDatewithTime);
+                     LocalDate aLDT = LocalDate.parse(strDatewithTime);
 
                      shipments.deliveryDate = aLDT;
                                     }
@@ -167,7 +167,7 @@ public class AtpSodaShipmentRepository implements ShipmentRepository {
         try {
 
             OracleCollection col = this.db.admin().createCollection("shipments");
-            String _document = "{\"orderId\":\"" + auth.orderId.toString() + "\",\"deliveryDate\":\"" + auth.deliveryDate + "\",\"carrier\":\"" + auth.carrier.toString() + "\",\"trackingNumber\":\"" + auth.trackingNumber.toString() + "\"}";
+            String _document = "{\"orderId\":\"" + shipment.orderId.toString() + "\",\"deliveryDate\":\"" + shipment.deliveryDate + "\",\"carrier\":\"" + shipment.carrier.toString() + "\",\"trackingNumber\":\"" + shipment.trackingNumber.toString() + "\"}";
             System.out.println(_document);
     
             // Create a JSON document.
