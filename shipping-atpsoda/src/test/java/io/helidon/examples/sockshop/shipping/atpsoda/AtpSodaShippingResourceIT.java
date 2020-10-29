@@ -5,7 +5,7 @@
  * http://oss.oracle.com/licenses/upl.
  */
 
-package io.helidon.examples.sockshop.shipping.mongo;
+package io.helidon.examples.sockshop.shipping.atpsoda;
 
 import io.helidon.examples.sockshop.shipping.ShippingResourceIT;
 
@@ -13,5 +13,5 @@ import io.helidon.examples.sockshop.shipping.ShippingResourceIT;
  * Integration tests for {@link io.helidon.examples.sockshop.shipping.ShippingResource},
  * using MongoDB for persistence.
  */
-class MongoShippingResourceIT extends ShippingResourceIT {
+class AtpSodaShippingResourceIT extends ShippingResourceIT {
 }

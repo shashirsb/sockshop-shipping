@@ -18,7 +18,6 @@
 
     <modules>
         <module>shipping-core</module>
-        <module>shipping-mongo</module>
         <module>shipping-atpsoda</module>
     </modules>
 
