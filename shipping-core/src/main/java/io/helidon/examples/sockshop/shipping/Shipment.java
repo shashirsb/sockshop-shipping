@@ -32,25 +32,25 @@ public class Shipment implements Serializable {
      */
     @Id
     @Schema(description = "Order identifier")
-    private String orderId;
+    public String orderId;
 
     /**
      * Shipping carrier.
      */
     @Schema(description = "Shipping carrier")
-    private String carrier;
+    public String carrier;
 
     /**
      * Tracking number.
      */
     @Schema(description = "racking number")
-    private String trackingNumber;
+    public String trackingNumber;
 
     /**
      * Estimated delivery date.
      */
     @Schema(description = "Estimated delivery date")
-    private LocalDate deliveryDate;
+    public LocalDate deliveryDate;
 
     @Builder
     Shipment(String orderId, String carrier, String trackingNumber, LocalDate deliveryDate) {
