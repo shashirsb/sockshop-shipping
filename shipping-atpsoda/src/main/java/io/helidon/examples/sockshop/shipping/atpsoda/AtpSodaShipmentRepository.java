@@ -80,7 +80,7 @@ import org.json.simple.parser.ParseException;
 import org.json.simple.parser.JSONParser;
 
 import org.apache.commons.lang3.StringUtils;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 /**
@@ -99,7 +99,6 @@ public class AtpSodaShipmentRepository implements ShipmentRepository {
     AtpSodaShipmentRepository() {
         try {
             String UserResponse = createData();
-            System.out.println(UserResponse);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -168,7 +167,6 @@ public class AtpSodaShipmentRepository implements ShipmentRepository {
 
             OracleCollection col = this.db.admin().createCollection("shipments");
             String _document = "{\"orderId\":\"" + shipment.orderId.toString() + "\",\"deliveryDate\":\"" + shipment.deliveryDate + "\",\"carrier\":\"" + shipment.carrier.toString() + "\",\"trackingNumber\":\"" + shipment.trackingNumber.toString() + "\"}";
-            System.out.println(_document);
     
             // Create a JSON document.
             OracleDocument doc =
